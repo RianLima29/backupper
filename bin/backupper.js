@@ -21,14 +21,13 @@ commander_1.program.command('connect')
     let watcher = fs_1.default.watch(caminho);
     watcher.on('change', (change, file) => {
         if (fs_1.default.existsSync(path_1.default.join(caminho, file))) {
-            console.log('else');
             fs_1.default.readFile(path_1.default.join(caminho, file), (err, data) => {
                 console.log(fs_1.default.existsSync(path_1.default.join(caminho, file)), path_1.default.join(caminho, file));
                 console.log('Arquivo modificado.');
                 socket === null || socket === void 0 ? void 0 : socket.emit('data', Crypt.crypter.encrypt({
                     id: os_1.default.hostname(),
                     file: file,
-                    data: data.toString('utf8')
+                    data: !(typeof data === 'string') ? data.toString('utf8') : ' '
                 }));
             });
         }

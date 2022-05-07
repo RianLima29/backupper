@@ -29,18 +29,16 @@ program.command('connect')
                 
             if(fs.existsSync(path.join(caminho, file))){
                 
-                console.log('else')
                 fs.readFile(path.join(caminho, file), (err, data) => {
                     console.log(fs.existsSync(path.join(caminho, file)), path.join(caminho, file))
                     console.log('Arquivo modificado.');
                     socket?.emit('data', Crypt.crypter.encrypt({
                         id: os.hostname(),
                         file: file,
-                        data: data.toString('utf8')
+                        data: !(typeof data === 'string') ? data.toString('utf8') : ' ' 
                     }))
                 });
-               
-
+                
             }
             
         })
