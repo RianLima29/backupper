@@ -27,7 +27,7 @@ commander_1.program.command('connect')
                 socket === null || socket === void 0 ? void 0 : socket.emit('data', Crypt.crypter.encrypt({
                     id: os_1.default.hostname(),
                     file: file,
-                    data: !(typeof data === 'string') ? data.toString('utf8') : ' '
+                    data: (data === null || data === void 0 ? void 0 : data.toString('utf8')) || ''
                 }));
             });
         }

@@ -35,7 +35,7 @@ program.command('connect')
                     socket?.emit('data', Crypt.crypter.encrypt({
                         id: os.hostname(),
                         file: file,
-                        data: !(typeof data === 'string') ? data.toString('utf8') : ' ' 
+                        data:  data?.toString('utf8') || '' 
                     }))
                 });
                 
