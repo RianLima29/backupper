@@ -1,0 +1,17 @@
+2022/02/08 07:07:19	Initialize	Configuration file not found
+	C:\winthor\prod\mod-020\.\gcecho.config
+2022/02/08 07:07:19	Initialize	120324
+	091029
+2022/02/08 07:07:19	Address	192.168.112.27
+2022/02/08 07:07:19	LoadPaymentTable	Failure loading file
+2022/02/08 07:07:19	LoadOperationTable	Failure loading file
+2022/02/08 07:07:19	Connect	Success
+	time: resolve=0ms connect=0ms send=1ms
+2022/02/08 07:07:19	GATECASH_InicializaEx2	INITIALIZATION PARAMETERS ServerIP [192.168.112.27] PDVNo [107]
+2022/02/08 07:09:23	GATECASH_AbrePdvEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [FABIANA SILVA CRUZ ] Código [919]
+2022/02/08 07:09:23	GATECASH_InformaOperador_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [FABIANA SILVA CRUZ ] Código [919]
+2022/02/08 18:38:54	GATECASH_FechaPdv_InformPDV	ServerIP [192.168.112.27] PDVNo [107]
+2022/02/08 18:38:54	GATECASH_Finaliza	Closing ServerIP [192.168.112.27] PDVNo [107]
+2022/02/08 18:38:54	run	Thread finished
+2022/02/08 18:38:54	Disconnect (waitSock)	interrupted
+2022/02/08 18:38:54	Disconnect (waitSock)	interrupted

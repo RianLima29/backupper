@@ -1,0 +1,34 @@
+2021/08/11 07:10:38	Initialize	Configuration file not found
+	C:\winthor\prod\mod-020\.\gcecho.config
+2021/08/11 07:10:38	Initialize	120324
+	091029
+2021/08/11 07:10:38	Address	192.168.112.27
+2021/08/11 07:10:38	LoadPaymentTable	Failure loading file
+2021/08/11 07:10:38	LoadOperationTable	Failure loading file
+2021/08/11 07:10:38	Connect	Success
+	time: resolve=0ms connect=0ms send=0ms
+2021/08/11 07:10:38	GATECASH_InicializaEx2	INITIALIZATION PARAMETERS ServerIP [192.168.112.27] PDVNo [107]
+2021/08/11 07:14:51	GATECASH_AbrePdvEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [FISCAL TREINAMENTO6] Código [100012]
+2021/08/11 07:14:51	GATECASH_InformaOperador_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [FISCAL TREINAMENTO6] Código [100012]
+2021/08/11 17:01:52	GATECASH_FechaPdv_InformPDV	ServerIP [192.168.112.27] PDVNo [107]
+2021/08/11 17:01:55	GATECASH_Finaliza	Closing ServerIP [192.168.112.27] PDVNo [107]
+2021/08/11 17:02:00	run	Thread finished
+2021/08/11 17:02:00	Disconnect (waitSock)	interrupted
+2021/08/11 17:02:00	Disconnect (waitSock)	interrupted
+2021/08/11 17:03:54	Initialize	Configuration file not found
+	C:\winthor\prod\mod-020\.\gcecho.config
+2021/08/11 17:03:54	Initialize	120324
+	091029
+2021/08/11 17:03:54	Address	192.168.112.27
+2021/08/11 17:03:54	LoadPaymentTable	Failure loading file
+2021/08/11 17:03:54	LoadOperationTable	Failure loading file
+2021/08/11 17:03:54	Connect	Success
+	time: resolve=0ms connect=0ms send=0ms
+2021/08/11 17:03:54	GATECASH_InicializaEx2	INITIALIZATION PARAMETERS ServerIP [192.168.112.27] PDVNo [107]
+2021/08/11 18:11:56	GATECASH_AbrePdvEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [MARIA APARECIDA NERY LOPES] Código [2427]
+2021/08/11 18:11:56	GATECASH_InformaOperador_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [MARIA APARECIDA NERY LOPES] Código [2427]
+2021/08/11 18:31:02	GATECASH_FechaPdv_InformPDV	ServerIP [192.168.112.27] PDVNo [107]
+2021/08/11 18:31:02	GATECASH_Finaliza	Closing ServerIP [192.168.112.27] PDVNo [107]
+2021/08/11 18:31:04	run	Thread finished
+2021/08/11 18:31:04	Disconnect (waitSock)	interrupted
+2021/08/11 18:31:04	Disconnect (waitSock)	interrupted

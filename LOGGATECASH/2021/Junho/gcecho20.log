@@ -1,0 +1,60 @@
+2021/06/20 07:56:17	Initialize	Configuration file not found
+	C:\winthor\prod\mod-020\.\gcecho.config
+2021/06/20 07:56:17	Initialize	120324
+	091029
+2021/06/20 07:56:17	Address	192.168.112.27
+2021/06/20 07:56:17	LoadPaymentTable	Failure loading file
+2021/06/20 07:56:17	LoadOperationTable	Failure loading file
+2021/06/20 07:56:17	Connect	Success
+	time: resolve=0ms connect=0ms send=1ms
+2021/06/20 07:56:17	GATECASH_InicializaEx2	INITIALIZATION PARAMETERS ServerIP [192.168.112.27] PDVNo [107]
+2021/06/20 07:56:33	GATECASH_AbrePdvEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [MARIA ELAINE LOPES DA SILVA] Código [1401]
+2021/06/20 07:56:33	GATECASH_InformaOperador_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [MARIA ELAINE LOPES DA SILVA] Código [1401]
+2021/06/20 08:07:50	GATECASH_FechaPdv_InformPDV	ServerIP [192.168.112.27] PDVNo [107]
+2021/06/20 08:07:52	GATECASH_AbrePdvEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [CAMILA ELAINE NASCIMENTO GUIMARAES] Código [3946]
+2021/06/20 08:07:52	GATECASH_InformaOperador_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [CAMILA ELAINE NASCIMENTO GUIMARAES] Código [3946]
+2021/06/20 08:11:43	GATECASH_InformaSupervisor_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Supervisor [MARIA ELAINE LOPES DA SILVA] Codigo [1401]
+2021/06/20 08:11:46	GATECASH_Suprimento_InformPDV	ServerIP [192.168.112.27] PDVNo [107] FormaPagamento [DINHEIRO] Complemento [TESOURARIA CENTRAL TAGUATINGA] Valor [50.000000]
+2021/06/20 08:15:28	GATECASH_AbreCupom_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Codigo [120983]
+2021/06/20 08:15:28	GATECASH_InformaOperador_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [CAMILA ELAINE NASCIMENTO GUIMARAES] Código [3946]
+2021/06/20 08:15:34	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [1] Codigo [7898949924128] Desc [ARROZ PATOSUL TP 01 5KG] Qt [1.000000] UnitVal [15.900000] Unitario [0] Escaneado [0]
+2021/06/20 08:15:44	GATECASH_ConsultaProduto_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Codigo [12748] Descricao [AGUA MINERAL INDAIA (PET) 500ML] Valor [0.890000]
+2021/06/20 08:15:46	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [2] Codigo [7896445412927] Desc [AGUA MINERAL INDAIA (PET) 500ML] Qt [1.000000] UnitVal [10.680000] Unitario [0] Escaneado [0]
+2021/06/20 08:15:53	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [3] Codigo [7894900011258] Desc [REFR COCA COLA 310ML LT] Qt [1.000000] UnitVal [23.880000] Unitario [0] Escaneado [0]
+2021/06/20 08:15:56	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [4] Codigo [7891991010085] Desc [CERV ANTARCTICA 269ML PILSEN LT] Qt [1.000000] UnitVal [29.850000] Unitario [0] Escaneado [0]
+2021/06/20 08:16:01	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [5] Codigo [7898963188070] Desc [ALFAJOR DOCE LEITE 40GR] Qt [1.000000] UnitVal [1.990000] Unitario [0] Escaneado [0]
+2021/06/20 08:16:02	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [6] Codigo [7898963188070] Desc [ALFAJOR DOCE LEITE 40GR] Qt [1.000000] UnitVal [1.990000] Unitario [0] Escaneado [0]
+2021/06/20 08:16:05	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [7] Codigo [7898963188070] Desc [ALFAJOR DOCE LEITE 40GR] Qt [1.000000] UnitVal [1.990000] Unitario [0] Escaneado [0]
+2021/06/20 08:16:05	GATECASH_DiferencaItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Sequencia [7] Diferença [-0.600000] Motivo [Desconto aplicado aos produtos [Cód. Barras: 7898963188070] anteriores.]
+2021/06/20 08:16:06	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [8] Codigo [7898963188070] Desc [ALFAJOR DOCE LEITE 40GR] Qt [1.000000] UnitVal [1.990000] Unitario [0] Escaneado [0]
+2021/06/20 08:16:06	GATECASH_DiferencaItem_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Sequencia [8] Diferença [-0.200000]
+2021/06/20 08:16:50	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [9] Codigo [7898026810023] Desc [GELO MINERAL CUBO 4KG] Qt [1.000000] UnitVal [6.990000] Unitario [0] Escaneado [0]
+2021/06/20 08:16:53	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [10] Codigo [7898026810023] Desc [GELO MINERAL CUBO 4KG] Qt [1.000000] UnitVal [6.990000] Unitario [0] Escaneado [0]
+2021/06/20 08:16:53	GATECASH_DiferencaItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Sequencia [10] Diferença [-2.000000] Motivo [Desconto aplicado aos produtos [Cód. Barras: 7898026810023] anteriores.]
+2021/06/20 08:16:56	GATECASH_DiferencaCupom_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Diferenca [-2.800000]
+2021/06/20 08:17:36	GATECASH_FormaPagamento_InformPDV	ServerIP [192.168.112.27] PDVNo [107] FormaPagamento [MASTER CRED-CIELO] Complemento [] Valor [99.450000]
+2021/06/20 08:17:39	GATECASH_Operacao_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Operação [Impressão Danfe - Bobina] Complemento [Via Cliente] Valor [0.000000]
+2021/06/20 08:17:40	GATECASH_Operacao_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Operação [Impressão Relatório Gerencial] Complemento [Relatório Desconto Atacado] Valor [0.000000]
+2021/06/20 08:17:40	GATECASH_FechaDocumento_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Codigo [120983]
+2021/06/20 08:18:52	GATECASH_FechaPdv_InformPDV	ServerIP [192.168.112.27] PDVNo [107]
+2021/06/20 08:18:52	GATECASH_Finaliza	Closing ServerIP [192.168.112.27] PDVNo [107]
+2021/06/20 08:18:57	run	Thread finished
+2021/06/20 08:18:57	Disconnect (waitSock)	interrupted
+2021/06/20 08:18:57	Disconnect (waitSock)	interrupted
+2021/06/20 08:19:43	Initialize	Configuration file not found
+	C:\winthor\prod\mod-020\.\gcecho.config
+2021/06/20 08:19:43	Initialize	120324
+	091029
+2021/06/20 08:19:43	Address	192.168.112.27
+2021/06/20 08:19:43	LoadPaymentTable	Failure loading file
+2021/06/20 08:19:43	LoadOperationTable	Failure loading file
+2021/06/20 08:19:43	Connect	Success
+	time: resolve=0ms connect=0ms send=0ms
+2021/06/20 08:19:43	GATECASH_InicializaEx2	INITIALIZATION PARAMETERS ServerIP [192.168.112.27] PDVNo [107]
+2021/06/20 18:11:51	GATECASH_AbrePdvEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [JOZILMA LEITE DE BARROS] Código [1704]
+2021/06/20 18:11:51	GATECASH_InformaOperador_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Funcionario [JOZILMA LEITE DE BARROS] Código [1704]
+2021/06/20 18:12:19	GATECASH_FechaPdv_InformPDV	ServerIP [192.168.112.27] PDVNo [107]
+2021/06/20 18:12:20	GATECASH_Finaliza	Closing ServerIP [192.168.112.27] PDVNo [107]
+2021/06/20 18:12:22	run	Thread finished
+2021/06/20 18:12:22	Disconnect (waitSock)	interrupted
+2021/06/20 18:12:22	Disconnect (waitSock)	interrupted
