@@ -61,6 +61,7 @@ let caminho = path.join(`${process.env.CAMINHO}\\${currentYear}\\${currentMonth}
     Crypt.crypter = Crypt(Crypt.passphrase)
 
     socket.on('connect',()=>{
+        console.log('Conectado!')
             socket?.emit('needTodaysFile?', Crypt.crypter.encrypt({
                 id: os.hostname(),
                 file: `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`
@@ -68,9 +69,12 @@ let caminho = path.join(`${process.env.CAMINHO}\\${currentYear}\\${currentMonth}
                     
     })
     socket.on('sendTodaysFile', ()=>{
-        console.log(`gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`)
            
-                let stream = ss.createStream()
+                if(!fs.existsSync(path.join(caminho, `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`))){
+                    console.log('O arquivo solicitado pelo servidor ainda não foi criado')
+                }else{
+
+                 let stream = ss.createStream()
                 
                 fs.createReadStream(path.join(caminho, `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`)).pipe(stream)
                 ss(socket)?.emit('todaysFile', stream ,Crypt.crypter.encrypt({
@@ -87,25 +91,22 @@ let caminho = path.join(`${process.env.CAMINHO}\\${currentYear}\\${currentMonth}
                         lastFile.data = data.toString('utf8')
                         lastFile.length = data.toString('utf8').length
                         lastFile.name = `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`
-                        console.log('consegui')
                     })
                     
                 })
+                }
     })
-    socket.on('disconnect',(err)=>{
-        console.log(err)
-    })
-    
     if(fs.existsSync(caminho)){
         var watcher = fs.watch(caminho)
     }else{
         var watcher = fs.watch('./')
+        console.log('O caminho especificado no arquivo de configuracao nao existe')
     }
     let lastFile :{length: number, name: string, data: string } = {length: 0, name: '', data: ''}
-    console.log(caminho)
+   
         
         watcher.on('change',(change, file:string)=>{
-            console.log(lastFile)
+           
             if(fs.existsSync(path.join(caminho, file))){
         
                 fs.readFile(path.join(caminho, file), (err, data) => {
@@ -116,10 +117,10 @@ let caminho = path.join(`${process.env.CAMINHO}\\${currentYear}\\${currentMonth}
 
                     if(data.toString('utf8').length < lastFile.length  && file == lastFile.name){
                         screenshot({format: 'png' }).then((buffer)=>{
-                            console.log('Emitido')
+                            console.log('Imagem enviada')
                             socket?.emit('printscreen', buffer)
                         })
-                        console.log('fraude')
+                        console.log('fraude detectada!')
                         socket?.emit('fraud',Crypt.crypter.encrypt({
                             id: os.hostname(),
                             file: file,

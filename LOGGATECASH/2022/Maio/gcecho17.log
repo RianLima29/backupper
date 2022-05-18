@@ -5401,9 +5401,9 @@
 2022/05/09 21:27:00	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [38] Codigo [7893000043213] Desc [HOT POCKET X PICANHA SADIA 145GR] Qt [1.000000] UnitVal [7.490000] Unitario [0] Escaneado [0]
 2022/05/09 21:27:06	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [39] Codigo [7893000043213] Desc [HOT POCKET X PICANHA SADIA 145GR] Qt [1.000000] UnitVal [7.490000] Unitario [0] Escaneado [0]
 2022/05/09 21:27:12	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [40] Codigo [7893000383005] Desc [MARGARINA QUALY S/SAL 80% LIP 500GR] Qt [1.000000] UnitVal [8.490000] Unitario [0] Escaneado [0]
-2022/05/09 21:27:14	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [41] Codigo [7891000073018] Desc [IOGURTE NESTLE 160G NATURAL DESNATADO] Qt [1.000000] UnitVal [3.290000] Unitario [0] Escaneado [0]
+2022/05/09 21:27:14	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [41] Codigo [7891000073018] Desc [IOGURTE NEST 160G NATURAL DESNATADO] Qt [1.000000] UnitVal [3.290000] Unitario [0] Escaneado [0]
 2022/05/09 21:27:15	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [42] Codigo [7891000073018] Desc [IOGURTE NESTLE 160G NATURAL DESNATADO] Qt [1.000000] UnitVal [3.290000] Unitario [0] Escaneado [0]
-2022/05/09 21:27:19	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [43] Codigo [7891000073018] Desc [IOGURTE NESTLE 160G NATURAL DESNATADO] Qt [1.000000] UnitVal [3.290000] Unitario [0] Escaneado [0]
+2022/05/09 21:27:19	GATECASH_ndeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [43] Codigo [7891000073018] Desc [IOGURTE NESTLE 160G NATURAL DESNATADO] Qt [1.000000] UnitVal [3.290000] Unitario [0] Escaneado [0]
 2022/05/09 21:27:19	GATECASH_DiferencaItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] Sequencia [43] Diferen�a [-0.900000] Motivo [Desconto aplicado aos produtos [C�d. Barras: 7891000073018] anteriores.]
 2022/05/09 21:27:22	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [44] Codigo [7896051135425] Desc [MANTEIGA EXTRA ITAMBE C/ SAL POTE 500GRS] Qt [1.000000] UnitVal [17.990000] Unitario [0] Escaneado [0]
 2022/05/09 21:27:24	GATECASH_VendeItemEx_InformPDV	ServerIP [192.168.112.27] PDVNo [107] SEQ [45] Codigo [7896301300092] Desc [MASSA PASTEL GERMANA 500G LANCHONETE] Qt [1.000000] UnitVal [5.790000] Unitario [0] Escaneado [0]
@@ -5490,3 +5490,5 @@ memelakjsdlkjqoiwcnz,ab
 k
 ksdacdefgalkjsdalsdkj
 abb
+meudeusaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalkjsdlkjasd
+mamamamama lalalal

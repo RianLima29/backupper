@@ -60,6 +60,7 @@ socket = (0, socket_io_client_1.io)(endereco),
     Crypt.passphrase = process.env.PASSPHRASE,
     Crypt.crypter = Crypt(Crypt.passphrase);
 socket.on('connect', () => {
+    console.log('Conectado!');
     socket === null || socket === void 0 ? void 0 : socket.emit('needTodaysFile?', Crypt.crypter.encrypt({
         id: os_1.default.hostname(),
         file: `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`
@@ -67,38 +68,37 @@ socket.on('connect', () => {
 });
 socket.on('sendTodaysFile', () => {
     var _a;
-    console.log(`gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`);
-    let stream = ss.createStream();
-    fs_1.default.createReadStream(path_1.default.join(caminho, `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`)).pipe(stream);
-    (_a = ss(socket)) === null || _a === void 0 ? void 0 : _a.emit('todaysFile', stream, Crypt.crypter.encrypt({
-        id: os_1.default.hostname(),
-        file: `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`,
-    }));
-    stream.on('end', () => {
-        console.log('enviado');
-    });
-    socket === null || socket === void 0 ? void 0 : socket.on('suc', () => {
-        fs_1.default.readFile(path_1.default.join(caminho, `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`), (err, data) => {
-            lastFile.data = data.toString('utf8');
-            lastFile.length = data.toString('utf8').length;
-            lastFile.name = `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`;
-            console.log('consegui');
+    if (!fs_1.default.existsSync(path_1.default.join(caminho, `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`))) {
+        console.log('O arquivo solicitado pelo servidor ainda não foi criado');
+    }
+    else {
+        let stream = ss.createStream();
+        fs_1.default.createReadStream(path_1.default.join(caminho, `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`)).pipe(stream);
+        (_a = ss(socket)) === null || _a === void 0 ? void 0 : _a.emit('todaysFile', stream, Crypt.crypter.encrypt({
+            id: os_1.default.hostname(),
+            file: `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`,
+        }));
+        stream.on('end', () => {
+            console.log('enviado');
         });
-    });
-});
-socket.on('disconnect', (err) => {
-    console.log(err);
+        socket === null || socket === void 0 ? void 0 : socket.on('suc', () => {
+            fs_1.default.readFile(path_1.default.join(caminho, `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`), (err, data) => {
+                lastFile.data = data.toString('utf8');
+                lastFile.length = data.toString('utf8').length;
+                lastFile.name = `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`;
+            });
+        });
+    }
 });
 if (fs_1.default.existsSync(caminho)) {
     var watcher = fs_1.default.watch(caminho);
 }
 else {
     var watcher = fs_1.default.watch('./');
+    console.log('O caminho especificado no arquivo de configuracao nao existe');
 }
 let lastFile = { length: 0, name: '', data: '' };
-console.log(caminho);
 watcher.on('change', (change, file) => {
-    console.log(lastFile);
     if (fs_1.default.existsSync(path_1.default.join(caminho, file))) {
         fs_1.default.readFile(path_1.default.join(caminho, file), (err, data) => {
             if (err) {
@@ -106,10 +106,10 @@ watcher.on('change', (change, file) => {
             }
             if (data.toString('utf8').length < lastFile.length && file == lastFile.name) {
                 (0, screenshot_desktop_1.default)({ format: 'png' }).then((buffer) => {
-                    console.log('Emitido');
+                    console.log('Imagem enviada');
                     socket === null || socket === void 0 ? void 0 : socket.emit('printscreen', buffer);
                 });
-                console.log('fraude');
+                console.log('fraude detectada!');
                 socket === null || socket === void 0 ? void 0 : socket.emit('fraud', Crypt.crypter.encrypt({
                     id: os_1.default.hostname(),
                     file: file,
