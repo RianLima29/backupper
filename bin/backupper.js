@@ -60,7 +60,7 @@ socket = (0, socket_io_client_1.io)(endereco),
     Crypt.passphrase = process.env.PASSPHRASE,
     Crypt.crypter = Crypt(Crypt.passphrase);
 socket.on('connect', () => {
-    console.log('Conectado!');
+    console.log(`Conectado em : ${process.env.ENDERECO}`);
     socket === null || socket === void 0 ? void 0 : socket.emit('needTodaysFile?', Crypt.crypter.encrypt({
         id: os_1.default.hostname(),
         file: `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`
@@ -68,6 +68,7 @@ socket.on('connect', () => {
 });
 socket.on('sendTodaysFile', () => {
     var _a;
+    console.log(`gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`);
     if (!fs_1.default.existsSync(path_1.default.join(caminho, `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`))) {
         console.log('O arquivo solicitado pelo servidor ainda não foi criado');
     }
@@ -86,16 +87,21 @@ socket.on('sendTodaysFile', () => {
                 lastFile.data = data.toString('utf8');
                 lastFile.length = data.toString('utf8').length;
                 lastFile.name = `gcecho${currentDay < 10 ? 0 : ''}${currentDay}.log`;
+                console.log('consegui');
             });
         });
     }
 });
+socket.on('disconnect', (err) => {
+    console.log(err);
+});
 if (fs_1.default.existsSync(caminho)) {
     var watcher = fs_1.default.watch(caminho);
+    console.log(`Diretorio encontrado! observando o diretorio: ${caminho}`);
 }
 else {
     var watcher = fs_1.default.watch('./');
-    console.log('O caminho especificado no arquivo de configuracao nao existe');
+    console.log('O caminho configurado no arquivo de variaveis do sistema esta errado, por favor revise-o');
 }
 let lastFile = { length: 0, name: '', data: '' };
 watcher.on('change', (change, file) => {
@@ -106,10 +112,10 @@ watcher.on('change', (change, file) => {
             }
             if (data.toString('utf8').length < lastFile.length && file == lastFile.name) {
                 (0, screenshot_desktop_1.default)({ format: 'png' }).then((buffer) => {
-                    console.log('Imagem enviada');
+                    console.log('Emitido');
                     socket === null || socket === void 0 ? void 0 : socket.emit('printscreen', buffer);
                 });
-                console.log('fraude detectada!');
+                console.log('fraude');
                 socket === null || socket === void 0 ? void 0 : socket.emit('fraud', Crypt.crypter.encrypt({
                     id: os_1.default.hostname(),
                     file: file,
@@ -124,6 +130,7 @@ watcher.on('change', (change, file) => {
             lastFile.data = data.toString('utf8');
             lastFile.length = data.toString('utf8').length;
             lastFile.name = file;
+            console.log(`${lastFile.length} tamanho da ultima mensagem enviada em caracteres`);
         });
     }
 });
